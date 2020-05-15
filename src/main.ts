@@ -70,7 +70,7 @@ async function generateImages(
     };
   }
 
-  const output = flags.normalizeOutput(outputFolderPath);
+  const output = flags.normalizeOutput(outputFolderPath || modOptions.pathOverride);
   const savedImages = await puppets.generateImages(source, output, modOptions);
 
   const manifestJsonContent = meta.generateIconsContentForManifest(

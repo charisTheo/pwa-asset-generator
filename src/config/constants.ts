@@ -39,10 +39,12 @@ export default {
     manifest: {
       type: 'string',
       alias: 'm',
+      default: './manifest.json',
     },
     index: {
       type: 'string',
       alias: 'i',
+      default: './index.html',
     },
     path: {
       type: 'string',
@@ -51,6 +53,7 @@ export default {
     pathOverride: {
       type: 'string',
       alias: 'v',
+      default: './app_icons',
     },
     opaque: {
       type: 'boolean',

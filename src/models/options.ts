@@ -34,13 +34,17 @@ export interface Options {
 
   /**
    Web app manifest file path to automatically update manifest file with the generated icons
+
+   @default "./manifest.json"
    */
-  readonly manifest?: string;
+  readonly manifest: string;
 
   /**
    Index html file path to automatically put splash screen and icon meta tags in
+
+   @default "./index.html"
    */
-  readonly index?: string;
+  readonly index: string;
 
   /**
    Path prefix to prepend for href links generated for meta tags
@@ -53,8 +57,9 @@ export interface Options {
    Override the path of images used in href/src in Web App Manifest and HTML files
 
    @example "./your-custom-image-folder-path"
+   @default "./app_icons"
    */
-  readonly pathOverride?: string;
+  readonly pathOverride: string;
 
   /**
    Image type
