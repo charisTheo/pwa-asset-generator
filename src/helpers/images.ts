@@ -66,6 +66,10 @@ const getSplashScreenImages = (
       let images: Image[] = acc;
 
       if (!options.landscapeOnly) {
+        if (curr.portrait.width > constants.APPLE_LAUNCH_SCREEN_MAX_WIDTH) {
+          return images;
+        }
+
         images = [
           ...images,
           mapToImageFileObj(

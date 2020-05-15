@@ -18,25 +18,6 @@ Please note that if any of the issues have an assignee or is `In Progress` withi
 * Every time you commit, eslint prettier plugin fixes any formatting issues via git commit hooks to keep the code style consistent across the project. Please do not disable commit hooks while committing.
 * To enable commit message linting via git hooks, please run `npm install` before committing any change.
 
-## Commit messages and continuous deployment
-
-This project uses [husky](https://github.com/typicode/husky) w [commitizen](https://github.com/commitizen/cz-cli) and [semantic-release](https://github.com/semantic-release/semantic-release) for conventional changelog and continuous deployment.
-
-When you run `npm install` before introducing any change, all the necessary packages for this workflow will be installed on your local repo clone.
-
-You should commit your changes without providing a custom message via `git commit -m` ❌, but instead using `npm run commit` ✅.
-After running `npm run commit`, commitizen CLI will initialize and it will help you through. All of your commit messages will be linted by `commitlint` to make sure they're conventional.
-
-Please note that your commit message has a direct impact on the deployment of a new release. When your PR is merged to `master`, any changes in your PR with;
-
-*  commit(s) of type `fix` will trigger a new `patch` release, e.g. +`0.0.1`
-*  commit(s) of type `feat` will trigger a new `minor` release, e.g. +`0.1.0`
-*  commit(s) with `BREAKING CHANGE` in body or footer of the message will trigger a new `major` release, e.g. +`1.0.0`
-
-You can read more about it on [commitizen](https://github.com/commitizen/cz-cli), [semver](https://semver.org), and [semantic-release](https://github.com/semantic-release/semantic-release).
-
-All other commit types will trigger no new release. See the history of [release workflow on GitHub actions](https://github.com/onderceylan/pwa-asset-generator/actions?query=workflow%3ARelease).
-
 ## Working with TypeScript
 
 Project is written with TypeScript language, meaning that an additional compilation step is required with `npm run build` script.

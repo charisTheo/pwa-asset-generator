@@ -2,6 +2,8 @@ import { Orientation } from '../models/image';
 import { HTMLMetaNames, HTMLMetaSelector } from '../models/meta';
 import APPLE_HIG_SPLASH_SCREEN_FALLBACK_DATA from './apple-fallback-data.json';
 
+const APPLE_LAUNCH_SCREEN_MAX_WIDTH: Number = 1250;
+
 const HTML_META_ORDERED_SELECTOR_LIST: HTMLMetaSelector[] = [
   {
     name: HTMLMetaNames.favicon,
@@ -174,6 +176,7 @@ export default {
   HTML_META_ORDERED_SELECTOR_LIST,
 
   FAVICON_FILENAME_PREFIX: 'favicon',
+  APPLE_LAUNCH_SCREEN_MAX_WIDTH,
   APPLE_ICON_FILENAME_PREFIX: 'apple-icon',
   APPLE_SPLASH_FILENAME_PREFIX: 'apple-splash',
   APPLE_SPLASH_FILENAME_DARK_MODE_POSTFIX: '-dark',

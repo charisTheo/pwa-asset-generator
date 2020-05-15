@@ -24,7 +24,6 @@ bin/update-fallback-data
 
 # Config files
 .github
-commitlint.config.js
 jest.config.js
 jest.setup.js
 tsconfig.json

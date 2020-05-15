@@ -98,7 +98,7 @@ const generateAppleLaunchImageHtml = (
 ): string => {
   return savedImages
     .filter((image) =>
-      image.name.startsWith(constants.APPLE_SPLASH_FILENAME_PREFIX),
+      image.name.startsWith(constants.APPLE_SPLASH_FILENAME_PREFIX) && image.width < constants.APPLE_LAUNCH_SCREEN_MAX_WIDTH,
     )
     .map(({ width, height, path, name, scaleFactor, orientation }) =>
       constants.APPLE_LAUNCH_SCREEN_META_HTML(

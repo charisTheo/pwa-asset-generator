@@ -89,7 +89,6 @@
     "@types/puppeteer-core": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
-    "commitizen": "^4.1.2",
     "cross-env": "^7.0.0",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.7.2",
@@ -99,7 +98,6 @@
     "eslint-plugin-jest": "^23.11.0",
     "eslint-plugin-prettier": "^3.1.0",
     "execa": "^4.0.1",
-    "husky": "^4.0.10",
     "jest": "^25.1.0",
     "jpeg-js": "^0.4.0",
     "lint-staged": "^10.0.0",
@@ -110,20 +108,9 @@
     "ts-jest": "^25.0.0",
     "typescript": "^3.9.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "**/**.{js}": [
       "eslint --fix"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
