@@ -43,7 +43,7 @@ $ pwa-asset-generator --help
     $ pwa-asset-generator logo.svg ./assets --icon-only --favicon --opaque false --maskable false --type png
     $ pwa-asset-generator logo.svg ./assets --dark-mode --background dimgrey --splash-only --quality 80
     $ pwa-asset-generator logo.svg ./assets --padding "calc(50vh - 5%) calc(50vw - 10%)" --path-override "./your-custom-image-folder-path"
-    $ pwa-asset-generator https://raw.githubusercontent.com/onderceylan/pwa-asset-generator/HEAD/static/logo.png ./temp -p "15%" -b "linear-gradient(to right, #fa709a 0%, #fee140 100%)"
+    $ pwa-asset-generator https://raw.githubusercontent.com/charistheo/pwa-asset-generator/HEAD/static/logo.png ./temp -p "15%" -b "linear-gradient(to right, #fa709a 0%, #fee140 100%)"
 
   Flag examples
     --background "rgba(255, 255, 255, .5)"

@@ -1,9 +1,9 @@
 # pwa-asset-generator ✨
-[![npm](https://img.shields.io/npm/v/pwa-asset-generator?color=brightgreen)](https://www.npmjs.com/package/pwa-asset-generator) [![node](https://img.shields.io/node/v/pwa-asset-generator)](https://www.npmjs.com/package/pwa-asset-generator) [![Build Status](https://github.com/onderceylan/pwa-asset-generator/workflows/CI/badge.svg)](https://github.com/onderceylan/pwa-asset-generator/actions?workflow=CI) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-brightgreen.svg)](https://github.com/semantic-release/semantic-release) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=onderceylan/pwa-asset-generator)](https://dependabot.com)
+[![npm](https://img.shields.io/npm/v/@pwabuild/pwa-asset-generator?color=brightgreen)](https://www.npmjs.com/package/@pwabuild/pwa-asset-generator) [![node](https://img.shields.io/node/v/@pwabuild/pwa-asset-generator)](https://www.npmjs.com/package/@pwabuild/pwa-asset-generator) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=charistheo/pwa-asset-generator)](https://dependabot.com)
 
 > A JavaScript library that automates PWA asset generation and image declaration. It automatically generates icon and splash screen images, guided by Web App Manifest specs and Apple Human Interface guidelines. It also updates manifest.json and index.html files with the generated images.
 
-![Usage demonstration](https://raw.githubusercontent.com/onderceylan/pwa-asset-generator/HEAD/static/demo.gif)
+![Usage demonstration](https://raw.githubusercontent.com/charistheo/pwa-asset-generator/HEAD/static/demo.gif)
 
 ## Features
 
@@ -16,7 +16,6 @@ PWA Asset Generator automates the image generation in a creative way. Having [Pu
 * Scrapes latest specs from Apple Human Interface guidelines website via Puppeteer to make your PWA ready for all/recent iOS devices out there 🤖
 
     * Supports offline mode and uses static spec data when things go wrong with scraping 📴
-    * Updates static spec data before each release automatically and [monitors spec changes everyday](https://github.com/onderceylan/pwa-asset-generator/actions?query=workflow%3A%22Sanity+Check%22) 🔄
 
 * Uses the Chrome browser as it’s a canvas of your fav image editor. It uses a shell HTML on the fly as an art board and centers your logo before taking screenshots for each resolution via Puppeteer 🤖
 
@@ -36,13 +35,13 @@ PWA Asset Generator automates the image generation in a creative way. Having [Pu
 ## Install
 
 ```
-$ npm install --global pwa-asset-generator
+$ npm install --global @pwabuild/pwa-asset-generator
 ```
 
 ## One-off execution
 
 ```
-$ npx pwa-asset-generator
+$ npx @pwabuild/pwa-asset-generator
 ```
 
 ## Usage
@@ -86,7 +85,7 @@ $ pwa-asset-generator --help
     $ pwa-asset-generator logo.svg ./assets --icon-only --favicon --opaque false --maskable false --type png
     $ pwa-asset-generator logo.svg ./assets --dark-mode --background dimgrey --splash-only --quality 80
     $ pwa-asset-generator logo.svg ./assets --padding "calc(50vh - 5%) calc(50vw - 10%)" --path-override "./your-custom-image-folder-path"
-    $ pwa-asset-generator https://raw.githubusercontent.com/onderceylan/pwa-asset-generator/HEAD/static/logo.png ./temp -p "15%" -b "linear-gradient(to right, #fa709a 0%, #fee140 100%)"
+    $ pwa-asset-generator https://raw.githubusercontent.com/charistheo/pwa-asset-generator/HEAD/static/logo.png ./temp -p "15%" -b "linear-gradient(to right, #fa709a 0%, #fee140 100%)"
 
   Flag examples
     --background "rgba(255, 255, 255, .5)"
@@ -121,7 +120,7 @@ const pwaAssetGenerator = require('pwa-asset-generator');
 // Generate images over a module function call, instead of using CLI commands
 (async () => {
   const { savedImages, htmlMeta, manifestJsonContent } = await pwaAssetGenerator.generateImages(
-    'https://raw.githubusercontent.com/onderceylan/pwa-asset-generator/HEAD/static/logo.png',
+    'https://raw.githubusercontent.com/charistheo/pwa-asset-generator/HEAD/static/logo.png',
     './temp',
     {
       scrape: false,

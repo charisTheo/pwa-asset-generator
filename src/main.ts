@@ -22,7 +22,7 @@ import constants from './config/constants';
 
  (async () => {
 		const { savedImages, htmlMeta, manifestJsonContent } = await pwaAssetGenerator.generateImages(
-		  'https://raw.githubusercontent.com/onderceylan/pwa-asset-generator/HEAD/static/logo.png',
+		  'https://raw.githubusercontent.com/charistheo/pwa-asset-generator/HEAD/static/logo.png',
 		  './temp',
 		   {
           scrape: false,

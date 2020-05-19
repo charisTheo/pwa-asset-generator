@@ -51,7 +51,7 @@
     "favicon",
     "pwa-assets"
   ],
-  "author": "Önder Ceylan <onderceylan@gmail.com>",
+  "author": "Charis Theo <dev@charistheo.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/charisTheo/pwa-asset-generator/issues"
